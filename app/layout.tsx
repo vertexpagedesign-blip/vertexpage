@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: '/' },
   robots: { index: true, follow: true },
+  verification: { google: 'pUpHR8ton2ne3k0IJg8-5m2jogFoyB364HQmwKlLNSY' },
   openGraph: { type: 'website', url: SITE_URL, siteName: 'Vertex Page Design', title: TITLE, description: DESCRIPTION, locale: 'en_US' },
   twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION },
 }
