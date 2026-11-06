@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Reveal } from './reveal'
 
 export function Eyebrow({ children }: { children: React.ReactNode }) {
@@ -23,10 +24,10 @@ export function FinalCta({ title = 'Ready for more calls?' }: { title?: string }
       <div className="card flex flex-col items-start gap-6 p-8 md:flex-row md:items-center md:justify-between md:p-12">
         <div>
           <h2 className="text-3xl font-bold md:text-5xl">{title}</h2>
-          <p className="mt-2 text-muted">Message Arthur on WhatsApp or call. Straight answer, no pressure.</p>
+          <p className="mt-2 text-muted">Book a call, send an email, or call Arthur. Straight answer, no pressure.</p>
         </div>
         <div className="flex w-full flex-col gap-3 sm:flex-row md:w-auto">
-          <a className="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://wa.me/16304892712?text=Hi%20Arthur%2C%20I'd%20like%20a%20quote%20for%20a%20website%20for%20my%20business.">Book a Free Call</a>
+          <Link className="btn btn-primary" href="/contact">Book a Free Call</Link>
           <a className="btn btn-ghost" href="tel:+16304892712">Call +1 630-489-2712</a>
         </div>
       </div>

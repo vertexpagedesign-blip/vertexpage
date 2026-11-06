@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import { ArrowRight, Check } from 'lucide-react'
-import { QUOTE_LINK, PHONE_HREF, trades, plans } from '@/lib/site'
+import { PHONE_HREF, trades, plans } from '@/lib/site'
 import { Reveal } from '@/components/site/reveal'
 import { Eyebrow, Section, FinalCta } from '@/components/site/bits'
+import { Testimonials } from '@/components/site/testimonials'
 import { SampleCase } from '@/components/site/sample-case'
 
 const steps = [
-  { t: 'Message Arthur', d: 'Send your trade, city, and what you need on WhatsApp.' },
+  { t: 'Contact Arthur', d: 'Send your trade, city, and what you need on WhatsApp.' },
   { t: 'Send photos and facts', d: 'Your services, service area, and a few real photos.' },
   { t: 'Arthur builds it', d: 'Standard sites go live in 5 business days after he has your photos and details.' },
   { t: 'Start getting calls', d: 'A fast phone-first site with a clear call button.' },
@@ -22,7 +23,7 @@ export default function Home() {
           <Reveal delay={160}><p className="mt-6 max-w-2xl text-lg text-muted sm:text-xl">One-page and multi-page sites for local service companies. Built to work on a phone. Built to get the phone to ring.</p></Reveal>
           <Reveal delay={240}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={QUOTE_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a Free Call <ArrowRight size={18} /></a>
+              <Link href="/contact" className="btn btn-primary">Book a Free Call <ArrowRight size={18} /></Link>
               <Link href="/work" className="btn btn-ghost">See work</Link>
               <Link href="/pricing" className="btn btn-ghost">See pricing</Link>
             </div>
@@ -57,7 +58,7 @@ export default function Home() {
             <Reveal key={t} as="li" delay={i * 50}><div className="card card-hover flex min-h-20 items-center px-5 font-display text-xl font-semibold">{t}</div></Reveal>
           ))}
         </ul>
-        <p className="mt-4 text-muted">Another trade? Message Arthur. Similar local service businesses work too.</p>
+        <p className="mt-4 text-muted">Another trade? Contact Arthur. Similar local service businesses work too.</p>
       </Section>
 
       <Section className="!pt-0">
@@ -87,6 +88,8 @@ export default function Home() {
         </div>
         <Link href="/pricing" className="btn btn-ghost mt-6">Compare plans &amp; preview</Link>
       </Section>
+
+      <Testimonials />
 
       <FinalCta title="Let's build your site." />
       <span className="sr-only"><a href={PHONE_HREF}>Call</a></span>

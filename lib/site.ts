@@ -7,6 +7,13 @@ export const EMAIL = 'vertexpagedesign@gmail.com'
 export function waLink(message: string) {
   return `https://wa.me/16304892712?text=${encodeURIComponent(message)}`
 }
+export const CONTACT_HREF = '/contact'
+export const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL ?? ''
+
+export type Testimonial = { quote: string; name: string; business: string; city: string }
+// Add only real, permissioned customer testimonials here.
+export const testimonials: Testimonial[] = []
+
 export const QUOTE_LINK = waLink("Hi Arthur, I'd like a quote for a website for my business.")
 
 export const trades = ['Plumbing', 'HVAC', 'Roofing', 'Junk removal', 'Moving', 'Electrical', 'Cleaning', 'Landscaping']

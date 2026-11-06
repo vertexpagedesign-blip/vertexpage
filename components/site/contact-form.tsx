@@ -1,15 +1,20 @@
 'use client'
 import { useState } from 'react'
-import { waLink } from '@/lib/site'
+import { useSearchParams } from 'next/navigation'
+import { CalendarCheck, Mail } from 'lucide-react'
+import { CALENDLY_URL, EMAIL, plans } from '@/lib/site'
 
 export function ContactForm() {
   const [sent, setSent] = useState(false)
+  const planId = useSearchParams().get('plan')
+  const plan = plans.find((p) => p.id === planId)
+
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const d = new FormData(e.currentTarget)
     const g = (k: string) => String(d.get(k) || '').trim()
-    const msg = `Hi Arthur, I'd like a quote.\n\nName: ${g('name')}\nBusiness: ${g('business')}\nTrade: ${g('trade')}\nCity: ${g('city')}\nPhone: ${g('phone')}\nWhat I need: ${g('need')}`
-    window.open(waLink(msg), '_blank', 'noopener,noreferrer')
+    const body = `Name: ${g('name')}\nEmail: ${g('email')}\nBusiness type: ${g('type')}\n${plan ? `Plan: ${plan.name} ($${plan.price})\n` : ''}\n${g('message')}`
+    window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(`Website inquiry from ${g('name')}`)}&body=${encodeURIComponent(body)}`
     setSent(true)
   }
   const L = ({ id, label, children }: { id: string; label: string; children: React.ReactNode }) => (
@@ -17,16 +22,18 @@ export function ContactForm() {
   )
   return (
     <form onSubmit={onSubmit} className="card grid gap-4 p-6 md:p-8">
+      {plan && <p className="rounded-lg border border-accent/40 px-4 py-3 text-sm">Plan selected: <span className="font-semibold text-accent">{plan.name} (${plan.price})</span></p>}
       <div className="grid gap-4 sm:grid-cols-2">
         <L id="name" label="Name"><input id="name" name="name" required autoComplete="name" className="field" /></L>
-        <L id="business" label="Business name"><input id="business" name="business" required autoComplete="organization" className="field" /></L>
-        <L id="trade" label="Trade"><input id="trade" name="trade" required placeholder="Plumbing, roofing, moving…" className="field" /></L>
-        <L id="city" label="City"><input id="city" name="city" required autoComplete="address-level2" className="field" /></L>
+        <L id="email" label="Email"><input id="email" name="email" type="email" required autoComplete="email" className="field" /></L>
       </div>
-      <L id="phone" label="Phone"><input id="phone" name="phone" type="tel" required autoComplete="tel" className="field" /></L>
-      <L id="need" label="What do you need?"><textarea id="need" name="need" required className="field" /></L>
-      <button type="submit" className="btn btn-primary">Send on WhatsApp</button>
-      <p className="text-sm text-muted" role="status">{sent ? 'WhatsApp should be open with your message. Tap send there to reach Arthur.' : 'This form does not store anything. It opens WhatsApp with your details filled in.'}</p>
+      <L id="type" label="Business type"><input id="type" name="type" required placeholder="Plumbing, roofing, moving…" className="field" /></L>
+      <L id="message" label="Message"><textarea id="message" name="message" required className="field" /></L>
+      <div className="grid gap-3 sm:grid-cols-2">
+        {CALENDLY_URL && <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary"><CalendarCheck size={18} /> Book a Free Call on Calendly</a>}
+        <button type="submit" className={`btn ${CALENDLY_URL ? 'btn-ghost' : 'btn-primary'}`}><Mail size={18} /> Send Email</button>
+      </div>
+      <p className="text-sm text-muted" role="status">{sent ? 'Your email app should be open with your message. Hit send there to reach Arthur.' : 'This form does not store anything. It opens your email app with your details filled in.'}</p>
     </form>
   )
 }

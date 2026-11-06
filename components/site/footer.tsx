@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PHONE_HREF, PHONE_DISPLAY, INSTAGRAM, FACEBOOK, EMAIL, QUOTE_LINK } from '@/lib/site'
+import { PHONE_HREF, PHONE_DISPLAY, INSTAGRAM, FACEBOOK, EMAIL, QUOTE_LINK, CONTACT_HREF } from '@/lib/site'
 
 export function SiteFooter() {
   const col = 'flex flex-col gap-1 text-muted [&_a]:inline-flex [&_a]:min-h-9 [&_a]:items-center [&_a:hover]:text-accent'
@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div className="md:col-span-2">
           <p className="font-display text-3xl font-bold">Vertex<span className="text-accent">.</span> Page Design</p>
           <p className="mt-3 max-w-sm text-muted">Simple websites for local service businesses. Built by Arthur Henrique.</p>
-          <a href={QUOTE_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-5">Book a Free Call</a>
+          <Link href={CONTACT_HREF} className="btn btn-primary mt-5">Book a Free Call</Link>
         </div>
         <div>
           <p className="mb-2 font-display text-lg">Pages</p>
