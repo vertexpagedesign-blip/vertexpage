@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme inline {
+  --color-bg: #07090f;
+  --color-surface: #10141c;
+  --color-surface-2: #161b26;
+  --color-line: #232a38;
+  --color-cream: #f3f6fb;
+  --color-muted: #9aa4b5;
+  --color-accent: #3ecbff;
+  --font-display: var(--font-oswald), 'Oswald', sans-serif;
+  --font-sans: var(--font-manrope), 'Manrope', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; background: #07090f; }
+body { background: #07090f; color: #f3f6fb; font-family: var(--font-sans); overflow-x: hidden; }
+h1, h2, h3, .font-display { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.01em; }
+
+:focus-visible { outline: 2px solid #3ecbff; outline-offset: 3px; border-radius: 6px; }
+
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); }
+.reveal.in { opacity: 1; transform: none; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 52px; padding: 0 1.5rem; border-radius: 10px; font-weight: 700; transition: transform .2s, box-shadow .2s, background .2s, border-color .2s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: #3ecbff; color: #04121a; }
+.btn-primary:hover { box-shadow: 0 8px 30px -6px rgba(62,203,255,.55); }
+.btn-ghost { border: 1px solid #2c3546; color: #f3f6fb; }
+.btn-ghost:hover { border-color: #3ecbff; color: #3ecbff; }
+
+.card { background: #10141c; border: 1px solid #232a38; border-radius: 16px; transition: transform .3s, border-color .3s, box-shadow .3s; }
+.card-hover:hover { transform: translateY(-4px); border-color: rgba(62,203,255,.5); box-shadow: 0 18px 40px -20px rgba(62,203,255,.35); }
+
+.field { width: 100%; min-height: 52px; background: #0b0f17; border: 1px solid #2c3546; border-radius: 10px; padding: 0 1rem; color: #f3f6fb; }
+textarea.field { padding: .9rem 1rem; min-height: 120px; }
+.field:focus { outline: 2px solid #3ecbff; outline-offset: 1px; border-color: #3ecbff; }
+
+@keyframes scrollscreen { 0%,12% { transform: translateY(0); } 50%,62% { transform: translateY(-38%); } 100% { transform: translateY(0); } }
+.scroll-anim { animation: scrollscreen 9s ease-in-out infinite; }
+@keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+.modal-in { animation: pop .3s cubic-bezier(.2,.7,.2,1); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+}
