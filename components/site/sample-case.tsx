@@ -5,7 +5,7 @@ const items = [{ n: 'Furniture removal', i: Sofa }, { n: 'Garage cleanout', i: H
 export function SampleCase() {
   return (
     <PhoneFrame>
-      <div className="h-full overflow-hidden px-4 pt-10 transition-transform duration-700 group-hover:-translate-y-6">
+      <div className="h-full overflow-hidden bg-[#0b0f17] px-4 pt-10 transition-transform duration-700 group-hover:-translate-y-6">
         <p className="text-[9px] font-bold uppercase tracking-widest text-accent">Junk Removal · Your City</p>
         <p className="font-display mt-2 text-[28px] font-bold leading-none text-cream">We haul it. You relax.</p>
         <div className="mt-3 grid gap-1.5">

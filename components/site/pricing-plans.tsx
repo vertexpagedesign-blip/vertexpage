@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Check, X, Eye } from 'lucide-react'
 import { plans, waLink, type Plan } from '@/lib/site'
-import { PhoneFrame, screens } from './phone'
+import { PhoneFrame, screens, sampleCompany } from './phone'
 import { Reveal } from './reveal'
 
 const desc = { standard: 'Simple one-page site: hero, services grid, and a clear call/WhatsApp button.', premium: 'Richer hero, proof strip, service list, and stronger visual hierarchy.', multi: 'Home, Services, and Contact slide in as separate pages with shared navigation.' }
@@ -27,7 +27,7 @@ function PreviewModal({ plan, onClose }: { plan: Plan; onClose: () => void }) {
             <p className="text-sm font-bold uppercase tracking-widest text-accent">{plan.name} preview</p>
             <h3 className="mt-2 text-4xl font-bold">${plan.price}</h3>
             <p className="mt-3 text-muted">{desc[plan.id]}</p>
-            <p className="mt-2 text-sm text-muted">Sample layout. Your site uses your name, photos, and service area.</p>
+            <p className="mt-4 rounded-lg border border-line bg-bg/60 p-3 text-sm text-muted"><span className="font-semibold text-cream">{sampleCompany[plan.id]}</span> is a fictional company. Your site uses your name, photos, colors, and service area.</p>
             <a href={waLink(`Hi Arthur, I want the ${plan.name} plan ($${plan.price}) for my business.`)} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-6 w-full">Get this plan</a>
           </div>
         </div>
