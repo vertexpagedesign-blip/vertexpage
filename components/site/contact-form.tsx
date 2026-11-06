@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { CalendarCheck, Mail } from 'lucide-react'
-import { CALENDLY_URL, EMAIL, plans } from '@/lib/site'
+import { Mail } from 'lucide-react'
+import { EMAIL, plans } from '@/lib/site'
 
 export function ContactForm() {
   const [sent, setSent] = useState(false)
@@ -29,10 +29,7 @@ export function ContactForm() {
       </div>
       <L id="type" label="Business type"><input id="type" name="type" required placeholder="Plumbing, roofing, moving…" className="field" /></L>
       <L id="message" label="Message"><textarea id="message" name="message" required className="field" /></L>
-      <div className="grid gap-3 sm:grid-cols-2">
-        {CALENDLY_URL && <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary"><CalendarCheck size={18} /> Book a Free Call on Calendly</a>}
-        <button type="submit" className={`btn ${CALENDLY_URL ? 'btn-ghost' : 'btn-primary'}`}><Mail size={18} /> Send Email</button>
-      </div>
+      <button type="submit" className="btn btn-ghost"><Mail size={18} /> Send Email</button>
       <p className="text-sm text-muted" role="status">{sent ? 'Your email app should be open with your message. Hit send there to reach Arthur.' : 'This form does not store anything. It opens your email app with your details filled in.'}</p>
     </form>
   )

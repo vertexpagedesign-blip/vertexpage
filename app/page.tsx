@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { ArrowRight, Check } from 'lucide-react'
-import { PHONE_HREF, trades, plans } from '@/lib/site'
+import { CALENDLY_URL, PHONE_HREF, trades, plans } from '@/lib/site'
 import { Reveal } from '@/components/site/reveal'
 import { Eyebrow, Section, FinalCta } from '@/components/site/bits'
 import { Testimonials } from '@/components/site/testimonials'
@@ -23,7 +23,7 @@ export default function Home() {
           <Reveal delay={160}><p className="mt-6 max-w-2xl text-lg text-muted sm:text-xl">One-page and multi-page sites for local service companies. Built to work on a phone. Built to get the phone to ring.</p></Reveal>
           <Reveal delay={240}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="btn btn-primary">Book a Free Call <ArrowRight size={18} /></Link>
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a Free Call <ArrowRight size={18} /></a>
               <Link href="/work" className="btn btn-ghost">See work</Link>
               <Link href="/pricing" className="btn btn-ghost">See pricing</Link>
             </div>

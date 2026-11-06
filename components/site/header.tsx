@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X, Phone } from 'lucide-react'
-import { PHONE_HREF, CONTACT_HREF } from '@/lib/site'
+import { PHONE_HREF, CALENDLY_URL } from '@/lib/site'
 
 const links = [
   { href: '/work', label: 'Work' },
@@ -25,7 +25,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex items-center gap-2">
           <a href={PHONE_HREF} className="btn btn-ghost hidden !min-h-11 lg:inline-flex"><Phone size={16} /> 630-489-2712</a>
-          <Link href={CONTACT_HREF} className="btn btn-primary !min-h-11 !px-4 text-sm sm:text-base">Book a Free Call</Link>
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary !min-h-11 !px-4 text-sm sm:text-base">Book a Free Call</a>
           <button aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)} className="grid h-11 w-11 place-items-center rounded-lg border border-line md:hidden">
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
