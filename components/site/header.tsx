@@ -24,7 +24,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <a href={PHONE_HREF} className="btn btn-ghost hidden !min-h-11 lg:inline-flex"><Phone size={16} /> 630-489-2712</a>
+          <a href={PHONE_HREF} className="btn btn-ghost hidden !min-h-11 lg:inline-flex"><Phone size={16} /> (915) 205-4012</a>
           <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary !min-h-11 !px-4 text-sm sm:text-base">Book a Free Call</a>
           <button aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)} className="grid h-11 w-11 place-items-center rounded-lg border border-line md:hidden">
             {open ? <X size={20} /> : <Menu size={20} />}
@@ -38,7 +38,7 @@ export function SiteHeader() {
               <li key={l.href}><Link href={l.href} onClick={() => setOpen(false)} className="flex min-h-12 items-center border-b border-line/60 text-lg font-semibold">{l.label}</Link></li>
             ))}
           </ul>
-          <a href={PHONE_HREF} className="btn btn-ghost mt-4 w-full"><Phone size={18} /> Call +1 630-489-2712</a>
+          <a href={PHONE_HREF} className="btn btn-ghost mt-4 w-full"><Phone size={18} /> Call (915) 205-4012</a>
         </nav>
       )}
     </header>

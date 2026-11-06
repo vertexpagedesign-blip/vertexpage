@@ -1,11 +1,11 @@
-export const PHONE_DISPLAY = '+1 630-489-2712'
-export const PHONE_HREF = 'tel:+16304892712'
+export const PHONE_DISPLAY = '(915) 205-4012'
+export const PHONE_HREF = 'tel:+19152054012'
 export const INSTAGRAM = 'https://instagram.com/vertexpagedesign'
 export const FACEBOOK = 'https://facebook.com/vertexpagedesign'
 export const EMAIL = 'vertexpagedesign@gmail.com'
 
 export function waLink(message: string) {
-  return `https://wa.me/16304892712?text=${encodeURIComponent(message)}`
+  return `https://wa.me/19152054012?text=${encodeURIComponent(message)}`
 }
 export const CONTACT_HREF = '/contact'
 export const CALENDLY_URL = 'https://calendly.com/vertex-pagedesign/30min'
