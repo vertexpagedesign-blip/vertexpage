@@ -11,7 +11,7 @@ const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' })
 
 const SITE_URL = 'https://vertexpagedesign.vercel.app'
 const TITLE = 'Vertex Page Design - Landing Pages That Sell in the US'
-const DESCRIPTION = 'I build fast, high-converting landing pages for US businesses. Get more clients in 7 days.'
+const DESCRIPTION = 'I build fast, high-converting landing pages for US businesses. Get more clients in 5 business days.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
