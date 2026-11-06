@@ -10,7 +10,7 @@ export default function Contact() {
   const row = 'card card-hover flex min-h-16 items-center gap-4 px-5 font-semibold'
   return (
     <>
-      <PageHero eyebrow="Contact" title="Get a quote.">Fill in the form. It opens WhatsApp with your details ready to send. Or just call.</PageHero>
+      <PageHero eyebrow="Contact" title="Book a Free Call.">Fill in the form. It opens WhatsApp with your details ready to send. Or just call.</PageHero>
       <Section className="grid gap-8 lg:grid-cols-[1.3fr_1fr]">
         <ContactForm />
         <div className="grid content-start gap-3">

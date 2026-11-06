@@ -54,7 +54,7 @@ export function PricingPlans() {
               <ul className="mt-6 flex flex-1 flex-col gap-3">
                 {p.features.map((f) => <li key={f} className="flex gap-3 text-[15px]"><Check size={18} className="mt-0.5 shrink-0 text-accent" />{f}</li>)}
               </ul>
-              <a href={waLink(`Hi Arthur, I want the ${p.name} plan ($${p.price}) for my business.`)} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-7">Get a quote</a>
+              <a href={waLink(`Hi Arthur, I want the ${p.name} plan ($${p.price}) for my business.`)} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-7">Book a Free Call</a>
               <button onClick={() => setActive(p)} className="btn btn-ghost mt-3"><Eye size={18} /> Preview</button>
             </div>
           </Reveal>

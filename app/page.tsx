@@ -18,11 +18,11 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-line bg-[radial-gradient(60%_70%_at_85%_0%,rgba(62,203,255,.12),transparent)]">
         <div className="mx-auto max-w-6xl px-5 pb-14 pt-14 md:pb-24 md:pt-24">
           <Reveal><Eyebrow>Websites for local service businesses</Eyebrow></Reveal>
-          <Reveal delay={80}><h1 className="max-w-4xl text-5xl font-bold leading-[1.02] sm:text-7xl">Websites that turn Google searches into <span className="text-accent">calls.</span></h1></Reveal>
+          <Reveal delay={80}><h1 className="max-w-4xl text-5xl font-bold leading-[1.02] sm:text-7xl">Local websites that turn Google searches into <span className="text-accent">phone calls.</span></h1></Reveal>
           <Reveal delay={160}><p className="mt-6 max-w-2xl text-lg text-muted sm:text-xl">One-page and multi-page sites for local service companies. Built to work on a phone. Built to get the phone to ring.</p></Reveal>
           <Reveal delay={240}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={QUOTE_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Get a quote <ArrowRight size={18} /></a>
+              <a href={QUOTE_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a Free Call <ArrowRight size={18} /></a>
               <Link href="/work" className="btn btn-ghost">See work</Link>
               <Link href="/pricing" className="btn btn-ghost">See pricing</Link>
             </div>

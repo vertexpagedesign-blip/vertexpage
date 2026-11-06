@@ -9,9 +9,18 @@ import './globals.css'
 const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald', weight: ['500', '600', '700'] })
 const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' })
 
+const SITE_URL = 'https://vertexpagedesign.vercel.app'
+const TITLE = 'Vertex Page Design - Landing Pages That Sell in the US'
+const DESCRIPTION = 'I build fast, high-converting landing pages for US businesses. Get more clients in 7 days.'
+
 export const metadata: Metadata = {
-  title: { default: 'Vertex Page Design | Websites that turn searches into calls', template: '%s | Vertex Page Design' },
-  description: 'Simple, high-converting websites for local service businesses in the US. Built for phones. Live in 5 business days.',
+  metadataBase: new URL(SITE_URL),
+  title: { default: TITLE, template: '%s | Vertex Page Design' },
+  description: DESCRIPTION,
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
+  openGraph: { type: 'website', url: SITE_URL, siteName: 'Vertex Page Design', title: TITLE, description: DESCRIPTION, locale: 'en_US' },
+  twitter: { card: 'summary_large_image', title: TITLE, description: DESCRIPTION },
 }
 export const viewport: Viewport = { themeColor: '#07090f', width: 'device-width', initialScale: 1 }
 

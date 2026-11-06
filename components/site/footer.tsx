@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div className="md:col-span-2">
           <p className="font-display text-3xl font-bold">Vertex<span className="text-accent">.</span> Page Design</p>
           <p className="mt-3 max-w-sm text-muted">Simple websites for local service businesses. Built by Arthur Henrique.</p>
-          <a href={QUOTE_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-5">Get a quote</a>
+          <a href={QUOTE_LINK} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-5">Book a Free Call</a>
         </div>
         <div>
           <p className="mb-2 font-display text-lg">Pages</p>
