@@ -8,7 +8,7 @@ export function waLink(message: string) {
   return `https://wa.me/16304892712?text=${encodeURIComponent(message)}`
 }
 export const CONTACT_HREF = '/contact'
-export const CALENDLY_URL = 'https://calendly.com/vertex-pagedesign/30min-'
+export const CALENDLY_URL = 'https://calendly.com/vertex-pagedesign/30min'
 
 export type Testimonial = { quote: string; name: string; business: string; city: string }
 // Add only real, permissioned customer testimonials here.
