@@ -24,7 +24,7 @@ export default function Home() {
           <Reveal delay={240}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="/pricing" className="btn btn-primary">Get My Website <ArrowRight size={18} /></Link>
-              <a href={PHONE_HREF} className="btn btn-ghost">Call (630) 489-2712</a>
+              <a href={PHONE_HREF} className="btn btn-ghost">Call (254) 263-0594</a>
               <Link href="/work" className="btn btn-ghost">See work</Link>
             </div>
             <p className="mt-4 text-sm text-muted">Live in 5 business days • No meetings • You own your site 100%</p>
