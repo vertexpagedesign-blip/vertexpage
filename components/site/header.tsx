@@ -13,8 +13,8 @@ const links = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-5">
+    <header className="sticky top-0 z-50 w-full overflow-x-hidden border-b border-line bg-bg/85 backdrop-blur-md">
+      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-2 overflow-hidden px-4">
         <Link href="/" className="shrink-0 font-display text-2xl font-bold tracking-wide" onClick={() => setOpen(false)}>
           Vertex<span className="text-accent">.</span>
         </Link>
@@ -24,12 +24,12 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex shrink-0 items-center gap-2">
-          <a href={PHONE_HREF} className="btn btn-ghost hidden !min-h-11 lg:inline-flex"><Phone size={16} /> (630) 489-2712</a>
-          <a href={PHONE_HREF} aria-label="Call Arthur" className="grid h-11 w-11 place-items-center rounded-lg border border-line lg:hidden">
+          <a href={PHONE_HREF} className="hidden !min-h-11 items-center gap-2 rounded-lg border border-line px-3 text-sm font-semibold lg:inline-flex"><Phone size={16} /> (630) 489-2712</a>
+          <a href={PHONE_HREF} aria-label="Call Arthur" className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-line lg:hidden">
             <Phone size={18} />
           </a>
-          <Link href="/pricing" className="btn btn-primary !min-h-11 !px-4 text-sm sm:text-base">Get My Website</Link>
-          <button aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)} className="grid h-11 w-11 place-items-center rounded-lg border border-line md:hidden">
+          <Link href="/pricing" className="btn btn-primary !min-h-11 shrink-0 !px-3 text-sm sm:!px-4 sm:text-base">Get My Website</Link>
+          <button aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="mobile-menu" onClick={() => setOpen(!open)} className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-line md:hidden">
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
