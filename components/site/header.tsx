@@ -24,7 +24,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex shrink-0 items-center gap-2">
-          <a href={PHONE_HREF} className="hidden !min-h-11 items-center gap-2 rounded-lg border border-line px-3 text-sm font-semibold lg:inline-flex"><Phone size={16} /> (630) 489-2712</a>
+          <a href={PHONE_HREF} className="hidden !min-h-11 items-center gap-2 rounded-lg border border-line px-3 text-sm font-semibold lg:inline-flex"><Phone size={16} /> (254) 263-0594</a>
           <a href={PHONE_HREF} aria-label="Call Arthur" className="grid h-11 w-11 shrink-0 place-items-center rounded-lg border border-line lg:hidden">
             <Phone size={18} />
           </a>
@@ -42,7 +42,7 @@ export function SiteHeader() {
             ))}
           </ul>
           <Link href="/pricing" onClick={() => setOpen(false)} className="btn btn-primary mt-4 w-full">Get My Website</Link>
-          <a href={PHONE_HREF} className="btn btn-ghost mt-2 w-full"><Phone size={18} /> Call (630) 489-2712</a>
+          <a href={PHONE_HREF} className="btn btn-ghost mt-2 w-full"><Phone size={18} /> Call (254) 263-0594</a>
         </nav>
       )}
     </header>
