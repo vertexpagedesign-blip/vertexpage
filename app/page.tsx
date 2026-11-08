@@ -7,7 +7,7 @@ import { Testimonials } from '@/components/site/testimonials'
 import { SampleCase } from '@/components/site/sample-case'
 
 const steps = [
-  { t: 'Contact Arthur', d: 'Send your trade, city, and what you need on WhatsApp.' },
+  { t: 'Contact Arthur', d: 'Send your trade, city, and what you need by Text or Call.' },
   { t: 'Send photos and facts', d: 'Your services, service area, and a few real photos.' },
   { t: 'Arthur builds it', d: 'Standard sites go live in 5 business days after he has your photos and details.' },
   { t: 'Start getting calls', d: 'A fast phone-first site with a clear call button.' },
@@ -23,10 +23,11 @@ export default function Home() {
           <Reveal delay={160}><p className="mt-6 max-w-2xl text-lg text-muted sm:text-xl">One-page and multi-page sites for local service companies. Built to work on a phone. Built to get the phone to ring.</p></Reveal>
           <Reveal delay={240}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a Free Call <ArrowRight size={18} /></a>
+              <Link href="/pricing" className="btn btn-primary">Get My Website <ArrowRight size={18} /></Link>
+              <a href={PHONE_HREF} className="btn btn-ghost">Call (630) 489-2712</a>
               <Link href="/work" className="btn btn-ghost">See work</Link>
-              <Link href="/pricing" className="btn btn-ghost">See pricing</Link>
             </div>
+            <p className="mt-4 text-sm text-muted">Live in 5 business days • No meetings • You own your site 100%</p>
           </Reveal>
           <Reveal delay={320}>
             <ul className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm font-bold uppercase tracking-widest text-muted">
@@ -74,19 +75,20 @@ export default function Home() {
       </Section>
 
       <Section className="!pt-0">
-        <Reveal><Eyebrow>Pricing</Eyebrow><h2 className="text-4xl font-bold md:text-5xl">Clear prices. One-time.</h2></Reveal>
+        <Reveal><Eyebrow>Pricing</Eyebrow><h2 className="text-4xl font-bold md:text-5xl">Clear prices. One-time.</h2><p className="mt-3 text-muted">No monthly fees. No hidden costs. You own your site.</p></Reveal>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {plans.map((p, i) => (
             <Reveal key={p.id} delay={i * 90}>
               <Link href="/pricing" className="card card-hover block h-full p-6">
                 <h3 className="text-2xl font-bold">{p.name}</h3>
-                <p className="mt-3 flex items-baseline gap-3"><span className="font-display text-5xl font-bold text-accent">${p.price}</span>{p.was && <span className="text-muted line-through">${p.was}</span>}</p>
+                <p className="mt-3 flex items-baseline gap-3"><span className="font-display text-5xl font-bold text-accent">${p.price}</span></p>
                 <p className="mt-3 flex gap-2 text-muted"><Check size={18} className="mt-0.5 shrink-0 text-accent" />{p.blurb}</p>
               </Link>
             </Reveal>
           ))}
         </div>
-        <Link href="/pricing" className="btn btn-ghost mt-6">Compare plans &amp; preview</Link>
+        <p className="mt-4 text-sm text-muted">50% to start, 50% at launch. Card or Zelle. You own your site 100%.</p>
+        <Link href="/pricing" className="btn btn-ghost mt-6">See what&apos;s included</Link>
       </Section>
 
       <Testimonials />
