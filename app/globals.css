@@ -45,3 +45,8 @@ textarea.field { padding: .9rem 1rem; min-height: 120px; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
