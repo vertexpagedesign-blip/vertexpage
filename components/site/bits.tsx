@@ -27,7 +27,7 @@ export function FinalCta({ title = 'Ready for more calls?' }: { title?: string }
         </div>
         <div className="flex w-full flex-col gap-3 sm:flex-row md:w-auto">
           <a className="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://calendly.com/vertex-pagedesign/30min">Book a Free Call</a>
-          <a className="btn btn-ghost" href="tel:+16304892712">Call +1 630-489-2712</a>
+          <a className="btn btn-ghost" href="tel:+12542035129">Call +1 254-203-5129</a>
         </div>
       </div>
     </section>
