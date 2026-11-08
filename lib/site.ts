@@ -6,7 +6,7 @@ export const FACEBOOK = 'https://facebook.com/vertexpagedesign'
 export const EMAIL = 'vertexpagedesign@gmail.com'
 
 export function smsLink(message: string) {
-  return `sms:+16304892712?&body=${encodeURIComponent(message)}`
+  return `sms:+12542630594?&body=${encodeURIComponent(message)}`
 }
 export const CONTACT_HREF = '/contact'
 export const CALENDLY_URL = 'https://calendly.com/vertex-pagedesign/30min'
